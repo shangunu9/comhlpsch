@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>School Admin Form</title>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+		<style>
+			body {
+				background-color: #F8FAFA;
+				color: #FFFFFF;
+				font-family: 'Fira Code', monospace;
+				line-height: 1;
+				margin: 0;
+			}
+			body> div {
+				position: absolute;
+				padding: 24px 48px;
+				border-radius: 16px;
+				background-color: rgba(144, 12, 63);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				max-width: 750px;
+				
+			}
+			form {
+				
+				width:450px;
+				height:500px;
+				display:flex;
+				flex-direction:column;
+				align-items:left;
+				justify-content: space-between;
+				
+				}
+			p {
+				margin: 24px 0;
+				width: 100%;
+			}
+			span {
+				color: maroon;
+			}
+			a, a:visited {
+				color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			
+			<h1 style="color:white;">School Admin Request Form</h1>
+		<form action='/SchoolDonate/checkout' method='post' enctype="multipart/form-data">
+			
+			<div>
+				<label>Supplies Requested:</label>
+				<select name='Accept01'>
+					<option value='Sanitizer'>Sanitizer</option>
+					<option value='Masks'>Masks</option>
+					<option value='Paper Towels'>Paper Towels</option>
+					<option value='Snacks'>Snacks</option>
+					<option value='Stationery'>Stationery</option>
+				</select>
+			</div>
+			<div>
+				<label>Other Supplies:</label>
+				<input name='bday' type='text'>
+			</div>
+			
+			<div>
+				<label>Supplies Drop-off Date: </label>
+				<input name='bday' type='date'>
+			</div>
+			
+			<div>
+				<label>Volunteers Needed: </label>
+				<input name='volunteer' placeholder='1-5' type='number' min='1' max='5' required>
+			</div>
+				<div>
+				<label>Volunteer Date: </label>
+				<input name='bday' type='date'>
+			</div>
+			<div>
+				<label>Request Funds: </label>
+				<input name='bday' type='text'>
+				</div>
+			<div>
+				<input type='submit'>
+				<input type='hidden' name='redirecturl' value='/index.html'>
+				<input type='hidden' name='admin' value='sample'>
+			</div>
+		</form>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>🏡 Welcome Home</title>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+		<style>
+			body {
+				background-color: #F8FAFA;
+				color: #FFFFFF;
+				font-family: 'Fira Code', monospace;
+				line-height: 1.5;
+				margin: 0;
+			}
+			body div {
+				position: absolute;
+				padding: 24px 48px;
+				border-radius: 16px;
+				background-color: rgba(144, 12, 63);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				max-width: 750px;
+			}
+			p {
+				margin: 24px 0;
+				width: 100%;
+			}
+			span {
+				color: maroon;
+			}
+			a, a:visited {
+				color: yellow;
+			}
+		</style>
+		
+		<style>
+	
+			img {
+			width: 100%;
+				}
+		</style>
+		<body>
+		<img src="school-house-clipart.jpeg" alt="School Icon" style="width:325px;height:400px;
+		margin:285px 220px;float:left" >
+		<img src="Community Image.jpg" alt="School Icon" style="width:325px;height:400px;
+		margin:285px 220px;float:right" >
+		
+		</body>
+</head>
+	<body>
+		<div class="container">
+			<center>
+			<h1>Welcome to your School Community Help</h1>
+			<p> Help your Schools to Help Yourself</p>
+				<br>🏡 Schools ==> <a class="domain" href="/SchoolDonate/school.html" target="_blank">Request Supplies or Funds</a></p>
+			<p>👋 Community ==> <a class="domain" href="/SchoolDonate/donate.html" target="_blank">Donate or Volunteer</a>
+			<p> All Donations are Appreciated!</p>
+			<p>Thank You!</p>
+			</center>
+		</div>
+		<script>
+			let links = document.querySelectorAll('.domain');
+			links.forEach(link => {
+				if(link.href.trim().startsWith('/')) link.href = location.origin + link.href;
+				if(link.innerHTML.trim().startsWith('/')) link.innerHTML = location.origin + link.innerHTML;
+			})
+		</script>
+	</body>
+</html>
